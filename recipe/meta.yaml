@@ -1,4 +1,4 @@
-{% set version = "1.2.12" %}
+{% set version = "1.3.0" %}
 
 package:
   name: hs_restclient
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/h/hs_restclient/hs_restclient-{{ version }}.tar.gz
-  sha256: 140cbbe501ed983b877adcb4390619b329d4cd31a0baa6579c6962c4973bc90f
+  sha256: 9f76428ba3c228e1d1239697f3ef0407cd81a9c3b68696f1880970e9389bf276
 
 build:
   number: 0
