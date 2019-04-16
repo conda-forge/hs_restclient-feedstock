@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -31,6 +31,7 @@ test:
 
 about:
   home: https://github.com/hydroshare/hs_restclient
+  # https://github.com/hydroshare/hs_restclient/issues/107
   license: BSD
   summary: 'HydroShare REST API client library'
 
