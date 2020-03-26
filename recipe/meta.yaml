@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -19,10 +19,10 @@ requirements:
     - pip
   run:
     - python
-    - requests
-    - requests-toolbelt
     - oauthlib
+    - requests
     - requests-oauthlib
+    - requests-toolbelt
 
 test:
   imports:
@@ -30,10 +30,10 @@ test:
     - hs_restclient.endpoints
 
 about:
-  home: https://github.com/hydroshare/hs_restclient
-  # https://github.com/hydroshare/hs_restclient/issues/107
-  license: BSD
+  home: https://pypi.org/project/hs_restclient/
   summary: HydroShare REST API client library
+  license: BSD-3-Clause
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
