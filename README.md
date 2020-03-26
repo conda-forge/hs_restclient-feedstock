@@ -1,9 +1,9 @@
 About hs_restclient
 ===================
 
-Home: https://github.com/hydroshare/hs_restclient
+Home: https://pypi.org/project/hs_restclient/
 
-Package license: BSD
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
