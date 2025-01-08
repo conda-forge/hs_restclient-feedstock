@@ -5,26 +5,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/h/hs_restclient/hs_restclient-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/h/hs_restclient/hs_restclient-{{ version }}.tar.gz
   sha256: 313c5905220bfb659db0fc188b00e65b2094e92b9a7fc91ed7824aa9aae3b2cd
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
-  build:
-    - python
+  host:
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - oauthlib
     - requests
     - requests-oauthlib
     - requests-toolbelt
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - hs_restclient
     - hs_restclient.endpoints
